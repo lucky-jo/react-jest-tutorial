@@ -10,6 +10,14 @@ const fn = {
       callback(name);
     }, 3000);
   },
+  getAge: () => {
+    const age = 30;
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(age);
+      }, 3000);
+    });
+  },
 };
 
 module.exports = fn;

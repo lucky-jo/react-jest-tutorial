@@ -63,3 +63,14 @@ test("3초 후에 받아온 이름은 Mike 이다.", (done) => {
   }
   fn.getName(callback);
 });
+
+test("나이가 30 입니까?", () => {
+  return fn.getAge().then((age) => {
+    expect(age).toBe(30);
+  });
+});
+
+// resolves, rejects matcher
+test("나이가 30 입니까?", () => {
+  return expect(fn.getAge()).resolves.toBe(30);
+});
