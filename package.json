@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ildang100/react-jest-tutorial/issues"
   },
-  "homepage": "https://github.com/ildang100/react-jest-tutorial#readme"
+  "homepage": "https://github.com/ildang100/react-jest-tutorial#readme",
+  "devDependencies": {
+    "jest": "^27.2.1"
+  }
 }
