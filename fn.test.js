@@ -55,3 +55,11 @@ test("유저 리스트에 Mike 가 있는가?", () => {
 test("에러가 발생했는가?", () => {
   expect(() => fn.throwErr()).toThrow("error");
 });
+
+test("3초 후에 받아온 이름은 Mike 이다.", (done) => {
+  function callback(name) {
+    expect(name).toBe("Mike");
+    done();
+  }
+  fn.getName(callback);
+});
