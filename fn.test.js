@@ -18,3 +18,15 @@ test("이름과 나이를 전달받아서 객체를 반환한다.", () => {
     age: 30,
   });
 });
+
+test("null 은 null 입니다.", () => {
+  expect(null).toBeNull();
+});
+
+test("0 은 false 입니다.", () => {
+  expect(fn.add(1, -1)).toBeFalsy();
+});
+
+test("1 은 true 입니다.", () => {
+  expect(fn.add(1, 0)).toBeTruthy();
+});
