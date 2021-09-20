@@ -18,6 +18,14 @@ const fn = {
       }, 3000);
     });
   },
+  getAgeErr: () => {
+    const age = 30;
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        reject("error");
+      }, 3000);
+    });
+  },
 };
 
 module.exports = fn;

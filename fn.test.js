@@ -74,3 +74,13 @@ test("나이가 30 입니까?", () => {
 test("나이가 30 입니까?", () => {
   return expect(fn.getAge()).resolves.toBe(30);
 });
+
+test("에러 메시지 error 발생했습니까?", () => {
+  return expect(fn.getAgeErr()).rejects.toBe("error");
+});
+
+// async await
+test("나이가 30 입니까?", async () => {
+  const age = await fn.getAge();
+  expect(age).toBe(30);
+});
