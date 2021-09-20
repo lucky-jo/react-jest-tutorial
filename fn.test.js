@@ -30,3 +30,16 @@ test("0 은 false 입니다.", () => {
 test("1 은 true 입니다.", () => {
   expect(fn.add(1, 0)).toBeTruthy();
 });
+
+test("ID는 10자 이하여야 합니다.", () => {
+  const id = "last29192919239";
+  expect(id.length).not.toBeLessThanOrEqual(10);
+});
+test("ID는 10자 이하여야 합니다.", () => {
+  const id = "last29192";
+  expect(id.length).toBeLessThanOrEqual(10);
+});
+
+test("0.1 더하기 0.2 는 0.3 입니다.", () => {
+  expect(fn.add(0.1, 0.2)).toBeCloseTo(0.3);
+});
