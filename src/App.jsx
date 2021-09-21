@@ -1,5 +1,6 @@
 import "./App.css";
-import Hello from "./component/Hello";
+// import Hello from "./component/Hello";
+import Timer from "./component/Timer";
 
 const user = {
   name: "Mike",
@@ -9,7 +10,8 @@ const user = {
 function App() {
   return (
     <div className="App">
-      <Hello user={user} />
+      {/* <Hello user={user} /> */}
+      <Timer />
     </div>
   );
 }
