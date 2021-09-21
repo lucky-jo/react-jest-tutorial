@@ -60,6 +60,10 @@ const fn = {
       resolve();
     }, 500);
   },
+  createUser: (name) => {
+    console.log("유저가 생성되었습니다.");
+    return { name };
+  },
 };
 
 module.exports = fn;

@@ -4,7 +4,7 @@
   "description": "react-jest-tutorial",
   "main": "index.js",
   "scripts": {
-    "test": "jest fn8"
+    "test": "jest fn9"
   },
   "repository": {
     "type": "git",
