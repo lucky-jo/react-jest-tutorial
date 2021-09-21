@@ -41,3 +41,23 @@ test("나이는 30 입니다", () => {
 test("성별은 남성 입니다", () => {
   expect(user.gender).toBe("male");
 });
+
+describe("Car 관련 작업", () => {
+  let car;
+  beforeAll(async () => {
+    car = await fn.connectCarDb();
+  });
+  afterAll(async () => {
+    return fn.disconnectCarDb();
+  });
+
+  test("브랜드 BMW 입니다", () => {
+    expect(car.brend).toBe("BMW");
+  });
+  test("이름은 z4 입니다", () => {
+    expect(car.name).toBe("z4");
+  });
+  test("색상은 red 입니다", () => {
+    expect(car.color).toBe("red");
+  });
+});

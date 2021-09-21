@@ -43,6 +43,23 @@ const fn = {
       resolve();
     }, 500);
   },
+  connectCarDb: () => {
+    return new Promise((resolve, reject) => {
+      const car = {
+        brend: "BMW",
+        name: "z4",
+        color: "red",
+      };
+      setTimeout(() => {
+        resolve(car);
+      }, 500);
+    });
+  },
+  disconnectCarDb: () => {
+    return new Promise((resolve, reject) => {
+      resolve();
+    }, 500);
+  },
 };
 
 module.exports = fn;
