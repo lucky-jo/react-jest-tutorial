@@ -1,19 +1,20 @@
+import logo from "./logo.svg";
 import "./App.css";
-// import Hello from "./component/Hello";
-import Timer from "./component/Timer";
+import Banner from "./components/Banner/Banner";
+import { Switch, Route } from "react-router-dom";
+import TodoPage from "./pages/TodoPage/TodoPage";
+import FollowersPage from "./pages/FollowersPage/FollowersPage";
 
-const user = {
-  name: "Mike",
-  age: 30,
-};
-
-function App() {
+const App = () => {
   return (
     <div className="App">
-      {/* <Hello user={user} /> */}
-      <Timer />
+      <Banner />
+      <Switch>
+        <Route strict exact path="/" component={TodoPage} />
+        <Route strict exact path="/followers" component={FollowersPage} />
+      </Switch>
     </div>
   );
-}
+};
 
 export default App;
