@@ -50,6 +50,7 @@ End to End Tests ( E2E )
 # Priority
 
 ![alt text](https://user-images.githubusercontent.com/40695665/134767397-519c50eb-4acf-4cf6-89e0-a039ff2b89db.png)
+
 렌더링 된 컴포넌트 접근시, 항상 접근이 가능한 요소부터 찾아 테스트 하며, 불가능 할경우 시멕틴 메서드를 접근하고, 끝으로 TestId 를 지정하여 접근 할 수 있다.
 
 # Describe Block
