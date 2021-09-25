@@ -7,6 +7,12 @@
 테스트 진행 시 가장 힘들었던 axios 모킹을 해결하고 보니, 모킹에 대한 이해가 더 명확해졌다.
 ```
 
+# Next Step
+
+```
+React Testing Librart with Redux
+```
+
 # Setup
 
 ```
@@ -134,3 +140,10 @@ mockedAxios.get.mockResolvedValueOnce(list);
 사용할 테스트 파일 내에서 mockedAxios 를 import 후, mockResolvedValueOnce()를 통해 Resolved 값을 전달 받으면 된다. 비동기 통신이기 떄문에 async await 를 사용 하여야 한다.
 
 axios 를 목킹 하는 이유는, 매번 테스트 시 마다 실제 api를 호출 할 경우, 비용이 발생하며, 테스트가 많아 질 경우, 시간도 많이 소요 된다. 테스트가 외부 데이터에 의존적이게 되며, 테스트 시 문제가 발생할 수 있다.
+
+# 출처
+
+```
+https://www.youtube.com/watch?v=g4MdUjxA-S4
+https://www.youtube.com/watch?v=7dTTFW7yACQ
+```
