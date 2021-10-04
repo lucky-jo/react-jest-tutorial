@@ -1,6 +1,17 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, cleanup } from "@testing-library/react";
 import Button from "../Button";
 import App from "../../../App";
+import { BrowserRouter } from "react-router-dom";
+
+afterEach(cleanup);
+
+const MockApp = () => {
+  return (
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
+};
 
 // test("button has correct initial color", () => {
 //   render(<Button />);
@@ -48,7 +59,7 @@ import App from "../../../App";
 // });
 
 test("Checkbox disables button on first click and enabled on second click", () => {
-  render(<App />);
+  render(<MockApp />);
   const checkbox = screen.getByRole("checkbox");
   const colorButton = screen.getByRole("button", { name: "Change to gray" });
   expect(colorButton).not.toBeEnabled();
