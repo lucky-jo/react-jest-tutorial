@@ -147,3 +147,68 @@ axios 를 목킹 하는 이유는, 매번 테스트 시 마다 실제 api를 호
 https://www.youtube.com/watch?v=g4MdUjxA-S4
 https://www.youtube.com/watch?v=7dTTFW7yACQ
 ```
+
+```
+test("Mike 라는 글자가 포함되는가?", () => {
+  // The render method creates a virtual dom for whatever JSX you give it as the argument here
+  render(<Hello user={user} />);
+  // screen - Access virtual DOM via screen global
+  const helloEl = screen.getByText(/Tom/);
+  // this matcher comes from Jest-DOM
+  expect(helloEl).toBeInTheDocument();
+});
+```
+
+### More assertion examples
+
+```
+expect(element.textContent).toBe('hello')
+expect(elementsArray).toHaveLength(7)
+
+```
+
+jest-dom
+
+- comes with create-react-app
+- src/setupTests.js imports it before each test, makes matchers avalable
+- DOM-based matchers ex) toBeVisible() or toBeChecked()
+
+React Testing Library helps with
+
+- rendering components into virtual DOM
+- searching virtual DOM
+- Interating with virtual DOM
+  Needs a test runner
+- Find tests, run them, make assertions
+  Jest
+- is recommended by Testing Library
+- comes with create-react-app
+
+How does Jest Work?
+global test method has two arguments:
+
+- string description
+- test function
+  Test fails if error is thrown when running function
+- assertions throw errors when expectation fails
+  No error -> tests pass
+
+# TDD ( Test-Driven Development )
+
+Write tests beforewriting code
+then write code according to "spec" set by tests
+"red-green" testing
+
+- Tests fail before code is written
+
+# What does React Testing Library Do?
+
+Create virtual DOM for testing and utilities for interacting with DOM
+Allows testing without a browser
+
+# Unit tests
+
+- tests one unit of code in isolation
+- integration tests - how multiple units work together
+- Functional tests - Tests a particular function of software
+- Acceptance / E2E Tests - Use actual browser and server ( Cypress, selenium)

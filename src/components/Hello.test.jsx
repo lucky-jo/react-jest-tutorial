@@ -11,8 +11,11 @@ const user2 = {
 };
 
 test("Mike 라는 글자가 포함되는가?", () => {
+  // The render method creates a virtual dom for whatever JSX you give it as the argument here
   render(<Hello user={user} />);
+  // screen - Access virtual DOM via screen global
   const helloEl = screen.getByText(/Tom/);
+  // this matcher comes from Jest-DOM
   expect(helloEl).toBeInTheDocument();
 });
 
