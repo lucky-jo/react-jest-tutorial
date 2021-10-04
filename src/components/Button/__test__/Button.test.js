@@ -1,5 +1,5 @@
 import { render, screen, fireEvent, cleanup } from "@testing-library/react";
-import Button from "../Button";
+import Button, { replaceCamelWithSpaces } from "../Button";
 import App from "../../../App";
 import { BrowserRouter } from "react-router-dom";
 
@@ -70,4 +70,19 @@ test("Checkbox disables button on first click and enabled on second click", () =
   expect(colorButton.textContent).toBe("Change to red");
   fireEvent.click(colorButton);
   expect(colorButton.textContent).toBe("Change to blue");
+});
+
+// Medium Violet Red
+// Midnight Blue
+
+describe("spaces before camel-case capital letters", () => {
+  it("Works for no inner capital letters", () => {
+    expect(replaceCamelWithSpaces("Red")).toBe("Red");
+  });
+  it("works for one inner capital letter", () => {
+    expect(replaceCamelWithSpaces("MidnightBlue")).toBe("Midnight Blue");
+  });
+  it("Works for multiple inner capital letters", () => {
+    expect(replaceCamelWithSpaces("MediumVioletRed")).toBe("Medium Violet Red");
+  });
 });
