@@ -3,6 +3,7 @@ import "./Button.css";
 
 function Button() {
   const [buttonColor, setButtonColor] = useState("red");
+  const [disabled, setDisabled] = useState(false);
   const buttonText = buttonColor === "red" ? "blue" : "red";
 
   const changeButtonColor = () => {
@@ -13,15 +14,24 @@ function Button() {
     }
   };
 
+  const toggleCheckbox = (e) => {
+    setDisabled(e.target.checked);
+  };
+
   return (
     <div className="">
       <button
         style={{ backgroundColor: buttonColor }}
         onClick={changeButtonColor}
+        disabled={disabled}
       >
         Change to {buttonText}
       </button>
-      <input type="checkbox" />
+      <input
+        type="checkbox"
+        defaultChecked={disabled}
+        onChange={toggleCheckbox}
+      />
     </div>
   );
 }
