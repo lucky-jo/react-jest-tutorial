@@ -22,6 +22,6 @@ test("button has correct initial text", () => {
   expect(colorButton).toHaveStyle({ background: "blue" });
 
   // expect the button text to be 'Change to blue';
-  expect(colorButton.textContent).toBe("Change to blue");
+  expect(colorButton.textContent).toBe("Change to red");
 });
 test("button turns blue when clicked", () => {});
