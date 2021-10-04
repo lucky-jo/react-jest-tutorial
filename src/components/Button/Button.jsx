@@ -28,6 +28,7 @@ function Button() {
         Change to {buttonText}
       </button>
       <input
+        id="disable-button-checkbox"
         type="checkbox"
         defaultChecked={disabled}
         onChange={toggleCheckbox}

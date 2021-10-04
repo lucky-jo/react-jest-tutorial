@@ -43,4 +43,6 @@ test("Checkbox disables button on first click and enabled on second click", () =
 
   fireEvent.click(checkbox);
   expect(colorButton).not.toBeEnabled();
+  fireEvent.click(checkbox);
+  expect(colorButton).toBeEnabled();
 });
