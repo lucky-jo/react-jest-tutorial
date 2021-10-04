@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import Button from "../Button";
+import App from "../../../App";
 
 test("button has correct initial color", () => {
   render(<Button />);
@@ -24,4 +25,13 @@ test("button has correct initial text", () => {
   // expect the button text to be 'Change to blue';
   expect(colorButton.textContent).toBe("Change to red");
 });
-test("button turns blue when clicked", () => {});
+test("initial conditions", () => {
+  render(<App />);
+  // check that the button starts out enabled
+  const colorButton = screen.getByRole("button", { name: "Change to blue" });
+  expect(colorButton).toBeEnabled();
+
+  // check that the checkbox starts out unchecked
+  const checkbox = screen.getByRole("checkbox");
+  expect(checkbox).not.toBeChecked();
+});

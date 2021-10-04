@@ -21,6 +21,7 @@ function Button() {
       >
         Change to {buttonText}
       </button>
+      <input type="checkbox" />
     </div>
   );
 }
