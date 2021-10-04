@@ -3,8 +3,8 @@ import "./Button.css";
 
 function Button() {
   const [buttonColor, setButtonColor] = useState("red");
-  const [disabled, setDisabled] = useState(false);
-  const buttonText = buttonColor === "red" ? "blue" : "red";
+  const [disabled, setDisabled] = useState(true);
+  const buttonText = disabled ? "gray" : buttonColor === "red" ? "blue" : "red";
 
   const changeButtonColor = () => {
     if (buttonColor === "red") {
